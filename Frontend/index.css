@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffe6f2, #e3f2fd);
+  color: #333;
+}
+
+.app-root {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-header {
+  text-align: center;
+  padding: 16px 0 8px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #37474f;
+}
+
+.subtitle {
+  margin: 4px 0 16px;
+  color: #607d8b;
+}
+
+.role-switch {
+  display: inline-flex;
+  gap: 8px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.role-switch button {
+  border: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  color: #78909c;
+}
+
+.role-switch button.active {
+  background: #ffecb3;
+  color: #37474f;
+}
+
+.app-main {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+.pastel-customer {
+  border: 2px solid #ffccbc;
+}
+
+.pastel-admin {
+  border: 2px solid #c5cae9;
+}
+
+h2 {
+  margin-top: 0;
+  color: #37474f;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: #78909c;
+  margin-bottom: 16px;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+label {
+  font-size: 0.85rem;
+  color: #546e7a;
+}
+
+input, select {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #cfd8dc;
+  font-size: 0.95rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #ffcc80;
+  box-shadow: 0 0 0 2px rgba(255, 204, 128, 0.3);
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+  background: #b2dfdb;
+  color: #004d40;
+}
+
+button:hover {
+  filter: brightness(0.97);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.info-box {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #fffde7;
+  border: 1px solid #fff59d;
+  font-size: 0.9rem;
+}
+
+.info-box.success {
+  background: #e8f5e9;
+  border-color: #a5d6a7;
+}
+
+.info-box.error {
+  background: #ffebee;
+  border-color: #ef9a9a;
+}
+
+.table-wrapper {
+  max-height: 350px;
+  overflow: auto;
+  margin-top: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+th, td {
+  border-bottom: 1px solid #eceff1;
+  padding: 6px 8px;
+  text-align: left;
+}
+
+th {
+  background: #f3e5f5;
+  position: sticky;
+  top: 0;
+}
+
+@media (min-width: 900px) {
+  .app-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
